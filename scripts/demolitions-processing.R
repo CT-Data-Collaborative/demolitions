@@ -76,5 +76,14 @@ demo_df_long_fips <- demo_df_long_fips %>%
   select(`Town/County`, FIPS, Year, `Measure Type`, Variable, Value) %>% 
   arrange(`Town/County`, Year)
 
+# Write to File
+write.table(
+  demo_df_long_fips,
+  file.path(getwd(), "data", "demolitions_2016.csv"),
+  sep = ",",
+  row.names = F,
+  na = "-9999"
+)
+
 
 
