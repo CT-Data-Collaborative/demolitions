@@ -1,7 +1,5 @@
 Demolitions
 
-[![Build Status](https://travis-ci.org/CT-Data-Collaborative/demolitions.svg?branch=master)](https://travis-ci.org/CT-Data-Collaborative/demolitions)
-
 Demolitions reports the number of housing units demolished in a given location.
 
 Data Source: <http://www.ct.gov/ecd/cwp/view.asp?a=1106&q=250640>

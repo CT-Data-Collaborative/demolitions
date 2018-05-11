@@ -38,7 +38,7 @@ town_fips_dp_URL <- 'https://raw.githubusercontent.com/CT-Data-Collaborative/ct-
 town_fips_dp <- datapkg_read(path = town_fips_dp_URL)
 town_fips <- (town_fips_dp$data[[1]])
 
-demo_df_long_fips <- merge(demo_df_long, fips, by = "Town", all.y=T)
+demo_df_long_fips <- merge(demo_df_long, town_fips, by = "Town", all.y=T)
 
 # Pull out data aggregated to county level
 county <- demo_df_long_fips[!is.na(demo_df_long_fips$County),]
@@ -79,7 +79,7 @@ demo_df_long_fips <- demo_df_long_fips %>%
 # Write to File
 write.table(
   demo_df_long_fips,
-  file.path(getwd(), "data", "demolitions_2016.csv"),
+  file.path(getwd(), "data", "demolitions_2017.csv"),
   sep = ",",
   row.names = F,
   na = "-9999"
